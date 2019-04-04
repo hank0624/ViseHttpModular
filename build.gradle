@@ -39,6 +39,8 @@ ext {
     versionName = '1.1.5'
 
     //App Dependencies
+    arouter_api_version='1.2.1.1'
+    arouter_compiler_version='1.1.2.1'
     viselog_version='1.1.2'
     retrofitVersion = '2.3.0'
     retrofit2_adapter_version='2.3.0'

@@ -40,4 +40,9 @@ public class Common {
          */
         int CONNECT_TIME_OUT = 10;
     }
+
+    public interface ARouterAPI{
+        String GROUP_PATH = "/test2/activity2";
+        String COMMON_PATH = "/test/activity3";
+    }
 }

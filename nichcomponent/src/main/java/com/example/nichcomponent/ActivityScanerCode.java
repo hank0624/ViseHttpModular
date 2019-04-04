@@ -23,6 +23,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.example.common.app.BaseActivity;
+import com.example.common.tool.RxAnimationTool;
+import com.example.common.tool.RxBarTool;
+import com.example.common.tool.RxBeepTool;
+import com.example.common.tool.RxPhotoTool;
+import com.example.common.tool.RxToast;
 import com.example.nichcomponent.scaner.CameraManager;
 import com.example.nichcomponent.scaner.OnRxScanerListener;
 import com.example.nichcomponent.scaner.PlanarYUVLuminanceSource;
@@ -35,13 +41,6 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import com.sjavamall.common.app.BaseActivity;
-import com.sjavamall.common.app.Common;
-import com.sjavamall.common.utils.RxAnimationTool;
-import com.sjavamall.common.utils.RxBarTool;
-import com.sjavamall.common.utils.RxBeepTool;
-import com.sjavamall.common.utils.RxPhotoTool;
-import com.sjavamall.common.utils.RxToast;
 import com.vise.log.ViseLog;
 
 import java.io.IOException;

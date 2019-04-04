@@ -9,6 +9,8 @@ import android.os.Handler;
 import android.support.annotation.StringRes;
 import android.text.TextUtils;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.common.BuildConfig;
 import com.example.common.net.http.ViseHttp;
 import com.example.common.net.http.interceptor.HttpLogInterceptor;
 import com.example.common.utils.LoaderImage;
@@ -59,6 +61,17 @@ public class Application extends android.app.Application {
         //腾讯Bugly
 //        CrashReport.initCrashReport(getApplicationContext(), "a65d09a88e", false);
 
+        //组件初始化
+        createARouter();
+    }
+
+    private void createARouter(){
+        if (BuildConfig.DEBUG) {
+            //开启InstantRun之后，一定要在ARouter.init之前调用openDebug
+            ARouter.openDebug();
+            ARouter.openLog();
+        }
+        ARouter.init(this);
     }
 
 

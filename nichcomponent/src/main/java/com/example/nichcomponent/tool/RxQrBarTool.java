@@ -2,6 +2,7 @@ package com.example.nichcomponent.tool;
 
 import android.graphics.Bitmap;
 
+import com.example.common.tool.RxImageTool;
 import com.example.nichcomponent.scaner.BitmapLuminanceSource;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -9,7 +10,6 @@ import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import com.sjavamall.common.utils.RxImageTool;
 
 import java.util.Hashtable;
 import java.util.Vector;
