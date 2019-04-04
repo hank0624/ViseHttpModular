@@ -1,1 +1,1 @@
-include ':app', ':common', ':group'
+include ':app', ':common', ':group', ':nichcomponent'
