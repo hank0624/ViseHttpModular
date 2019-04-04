@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    api "com.android.support:design:$rootProject.ext.supportVersion"
+    api "com.android.support:support-v4:$rootProject.ext.supportVersion"
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Log框架
+    api "com.vise.xiaoyaoyou:viselog:$rootProject.ext.viselog_version"
+    //retrofit + rxJava
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptor"
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofit2_adapter_version"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxjava2_version"
+    //glide
+    api "com.github.bumptech.glide:glide:$rootProject.ext.glide_version"
+//    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.glide_version"
+}
