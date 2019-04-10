@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+
+    <color name="hint_content_color">#333333</color>
+    <color name="hint_background">#f1f1f1</color>
+    <color name="hint_dialog_left_color">#333333</color>
+    <color name="hint_dialog_right_color">#0b69d2</color>
+</resources>
