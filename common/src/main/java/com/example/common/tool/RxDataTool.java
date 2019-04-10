@@ -163,6 +163,42 @@ public class RxDataTool {
     }
 
     /**
+     * 邮箱用****号隐藏前面的字母
+     *
+     * @param email 邮箱账号
+     * @return
+     */
+    public static String settingEmail(String email) {
+        String emails = "邮箱不正确";
+        if (RxRegTool.isEmail(email)){
+            emails = email.replaceAll("(\\w?)(\\w+)(\\w)(@\\w+\\.[a-z]+(\\.[a-z]+)?)", "$1****$3$4");
+        }
+        return emails;
+    }
+
+    /**
+     * 身份证号用****号隐藏前面的字母
+     *
+     * @param idCard 身份证号
+     * @return
+     */
+    public static String settingID(String idCard) {
+        String idCardHide;
+        switch (idCard.length()){
+            case 15:
+                idCardHide = idCard.replaceAll("(\\d{3})\\d{9}(\\w{3})", "$1*****$2");
+                break;
+            case 18:
+                idCardHide = idCard.replaceAll("(\\d{4})\\d{10}(\\w{4})", "$1*****$2");
+                break;
+                default:
+                    idCardHide = "身份证号不正确";
+                    break;
+        }
+        return idCardHide;
+    }
+
+    /**
      * 隐藏手机中间4位号码
      * 130****0000
      *
@@ -173,7 +209,8 @@ public class RxDataTool {
         if (mobile_phone.length() != 11) {
             return "手机号码不正确";
         }
-        return mobile_phone.substring(0, 3) + "****" + mobile_phone.substring(7, 11);
+//        return mobile_phone.substring(0, 3) + "****" + mobile_phone.substring(7, 11);
+        return mobile_phone.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
     }
 
     /**
