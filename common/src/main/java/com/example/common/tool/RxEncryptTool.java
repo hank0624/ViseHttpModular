@@ -41,7 +41,7 @@ public class RxEncryptTool {
      * <p>加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB</p>
      * <p>填充方式有：NoPadding、ZerosPadding、PKCS5Padding</p>
      */
-    public static String TripleDES_Transformation = "DESede/ECB/NoPadding";
+    public static String TripleDES_Transformation = "DESede/ECB/PKCS5Padding";
     /**
      * AES转变
      * <p>法算法名称/加密模式/填充方式</p>
