@@ -906,6 +906,16 @@ public class RxDataTool {
     }
 
     /**
+     * 将数据保留4位小数
+     * @param value
+     * @return
+     */
+    public static String getNumericalValue(double value){
+        DecimalFormat dec = new DecimalFormat("#,##0.0000");
+        return dec.format(value);
+    }
+
+    /**
      * 四舍五入
      *
      * @param value 数值
