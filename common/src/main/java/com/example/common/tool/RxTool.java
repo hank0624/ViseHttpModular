@@ -255,6 +255,18 @@ public class RxTool {
         return m.replaceAll("").trim();
     }
 
+    /**
+     *  只允许字母、和空格和汉字
+     * @param str
+     * @return
+     * @throws PatternSyntaxException
+     */
+    public static String stringInputFilter(String str) throws PatternSyntaxException {
+        // 只允许字母、和空格和汉字
+        String regEx = "[a-zA-Z\\u4E00-\\u9FA5 ]+";
+        return str != null ? (str.matches(regEx) ? str : "") : "";
+    }
+
     public static void setEdDecimal(EditText editText, int count) {
         if (count < 0) {
             count = 0;
